@@ -1,0 +1,31 @@
+﻿<h2>Usuário</h2>
+<div class= "panel panel-default">
+    <div class= "panel-heading">
+        Lista usuário
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="i in users">
+                    <td>{{i.Nome}}</td>
+                    <td>{{i.CPF}}</td>
+                    <td>{{i.Endereco}}</td>
+                    <td>{{i.Telefone}}</td>
+                </tr>
+                <tr ng-if="!users || users.length == 0">
+                    <td colspan="3" style="text-align: center">
+                        Nenhum usuário encontrado..
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

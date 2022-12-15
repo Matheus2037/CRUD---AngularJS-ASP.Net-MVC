@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  teste01:
+    image: ${DOCKER_REGISTRY-}teste01
+    build:
+      context: .\Teste01
+      dockerfile: Dockerfile

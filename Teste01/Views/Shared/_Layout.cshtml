@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html ng-app="cadastro">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    @RenderBody()
+    <script src="~/bower_components/angular/angular.min.js"></script>
+    <script src="~/bower_components/angular/angular-route.min.js"></script>
+    <script src="~/Scripts/app/app.route.js"></script>
+    <script src="~/Scripts/app/App.js"></script>
+    <script src="~/app/shared/services/dataService.js"></script>
+    <script src="~/app/controllers/userCtrl.js"></script>
+    @Scripts.Render(new string[] { "~/js" })
+</body>  
+</html>

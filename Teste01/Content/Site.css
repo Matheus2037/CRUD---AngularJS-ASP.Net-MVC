@@ -1,0 +1,142 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+html {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+.bodyLogin {
+    background: url("/Images/BackGroundAngularJs.png") no-repeat;
+    background-image: linear-gradient(to right, rgba(160, 24, 28, 1), rgba(160, 24, 28, 0.85), rgba(117, 19, 93, 0)), url("/Images/BackGroundAngularJs.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bodyHome {
+    margin: 0;
+}
+.bodyCad {
+    margin: 0;
+}
+.container {
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: unset;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.login{
+    margin-left:50px;
+}
+.LoginText {
+    padding-bottom: 10px;
+    color: white;
+}
+.TextInput {
+    font-family: 'Poppins', serif;
+    font-size: 20px;
+}
+.Input {
+    width: 300px;
+    height: 40px;
+    border-radius: 17px;
+    font-family: 'Poppins', serif;
+    font-size: 16px;
+}
+.box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btLogar {
+    background-color: #A0181C;
+    border: 2px solid #303030;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.4s;
+}
+    .btLogar:hover {
+        background-color: #79131F;
+    }
+.AlertText {
+    color: black;
+    font-size: 18px;
+    font-family: 'Poppins', serif;
+}
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+li {
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+    a:hover{
+        opacity: 0.7;
+    }
+nav {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', serif;
+    background: #79131f;
+    height: 10vh;
+}
+main {
+    background: url("/Images/BackGroundHome.jpg") no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+    .nav-list li {
+        letter-spacing: 3px;
+        margin-left: 50px;
+    }
+.TabelaStyle {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: 'Poppins', serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+    .TabelaStyle thead tr {
+        background-color: #79131f;
+        color: #ffffff;
+        text-align: left;
+    }
+    .TabelaStyle th,
+    .TabelaStyle td {
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+        .TabelaStyle tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+.tabela{
+    margin-left:169.69px;
+}
+.InputCad {
+    margin-left: 169.69px;
+    width: 850px;
+    height: 300px;
+}
+input {
+    width: 180px;
+    height: 30px;
+    font-family: 'Poppins', serif;
+    font-size: 11px;
+    border-radius: 5px;
+}
+

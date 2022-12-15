@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html ng-app="cadastro">
+<head>
+    <meta charset="utf-8" />
+    <title>Cadastro de usuarios</title>
+    <script src="../../Scripts/angular.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script>
+        angular.module("cadastro", []);
+        angular.module("cadastro").controller("cadastroCtrl", function ($scope) {
+
+            $scope.titulo = "Usuários cadastrados";
+            $scope.usuarios = [
+                { codigo: 1, nome: "Matheus", cpf: 23138476163, endereco: "Rincão/Sc", telefone: 4637264288 },
+                { codigo: 2, nome: "Eduardo", cpf: 26071603595, endereco: "Criciúma/Sc", telefone: 4826996596 },
+                { codigo: 3, nome: "Leonardo", cpf: 86495446225, endereco: "Criciúma/Sc", telefone: 4937264288 },
+            ];
+
+            $scope.incluirUsuario = function (usuario) {
+                $scope.usuarios.push(usuario);
+                delete $scope.usuario;
+                newCodigo = usuario.codigo;
+                newCpf = usuario.cpf;
+                const primeiros4digitostexto = String(newCpf).slice(0, 4);
+                const primeiros4digitos = Number(primeiros4digitostexto);
+                alert("Pessoa cadastrada com sucesso, Código: " + newCodigo + "  " + "Cpf: " + primeiros4digitos + ".....");
+            };
+
+        });
+    </script>
+</head>
+<body class="bodyCad">
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><img src="~/Images/IcoCad.png" width=30 /></li>
+                <li><a href="/Home/Home">Home</a></li>
+                <li><a href="/Home/Cadastros">Cadastros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div ng-controller="cadastroCtrl">
+        <div>
+            <div class="tabela">
+                <h3>{{titulo}}</h3>
+                <table class="TabelaStyle">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Endereço</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="usuario in usuarios">
+                            <td>{{usuario.codigo}}</td>
+                            <td>{{usuario.nome}}</td>
+                            <td>{{usuario.cpf}}</td>
+                            <td>{{usuario.endereco}}</td>
+                            <td>{{usuario.telefone}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="InputCad">
+                <input type="number" ng-model="usuario.codigo" placeholder="Informe o código do usuário" />
+                <input type="text" ng-model="usuario.nome" placeholder="Informe o nome do usuário" />
+                <input type="number" ng-model="usuario.cpf" placeholder="Informe o CPF do usuário" />
+                <input type="text" ng-model="usuario.endereco" placeholder="Informe o endereço do usuário" />
+                <input type="number" ng-model="usuario.telefone" placeholder="Informe o telefone do usuário" />
+                <button ng-click="incluirUsuario(usuario)" ng-disabled="!usuario.nome || !usuario.cpf">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

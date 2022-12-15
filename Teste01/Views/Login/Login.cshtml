@@ -1,0 +1,32 @@
+﻿@model Teste01.Models.UserModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body class="bodyLogin">
+    <div class="container">
+        <div class="login">
+            @using (Html.BeginForm("Verify", "Login", FormMethod.Post))
+            {<h2 class="LoginText">Login</h2>
+                <div class="inputBox">
+                    <div class="box">
+                        @Html.TextBoxFor(m => m.username, new { @class = "Input", @placeholder = "Usuário", @required = true })
+                    </div>
+                    <div class="box">
+                        @Html.PasswordFor(m => m.password, new { @class = "Input", @placeholder = "Senha", @required = true })
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" name="submit" class="btLogar" value="submit">Logar</button>
+                </div>
+            }
+            <div class="AlertText">
+                @ViewBag.message
+            </div>
+        </div>
+    </div>
+</body>
+</html>
